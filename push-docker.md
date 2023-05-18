@@ -11,7 +11,7 @@ docker push 510248292/chatgpt-web:latest
 docker pull 510248292/chatgpt-web:latest
 # 将该镜像下载到了服务器 之后
 # 运行命令
-docker run --name chatgpt-web -d -p 3002:3002 --env OPENAI_API_KEY='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' 510248292/chatgpt-web
+docker run --name chatgpt-web -d -p 3002:3002 --env OPENAI_API_KEY='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' 510248292/chatgpt-web
 
 # 启动了该容器
 # 运行

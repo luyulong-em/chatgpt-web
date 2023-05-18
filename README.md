@@ -190,26 +190,26 @@ docker run --name chatgpt-web --rm -it -p 127.0.0.1:3002:3002 --env OPENAI_API_K
 # chatgpt-web % docker run --name chatgpt-web --rm -it -p 127.0.0.1:3002:3002 --env OPENAI_API_KEY='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' chatgpt-web
 # 后台运行
 docker run --name chatgpt-web -d -p 3002:3002 --env OPENAI_API_KEY='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' 510248292/chatgpt-web
-docker run --name chatgpt-web2 -d -p 3002:3002  --env OPENAI_API_KEY='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' 510248292/chatgpt-web
+docker run --name chatgpt-web -d -p 3002:3002  --env OPENAI_API_KEY='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' 510248292/mychat
 # 运行地址
 http://localhost:3002/
 ```
 
 #### Docker compose
 
-[Hub 地址](https://hub.docker.com/repository/docker/chenzhaoyu94/chatgpt-web/general)
+[Hub 地址](https://hub.docker.com/repository/docker/510248292/chatgpt-web/general)
 
 ```yml
 version: '3'
 
 services:
   app:
-    image: chenzhaoyu94/chatgpt-web # 总是使用 latest ,更新时重新 pull 该 tag 镜像即可
+    image: 510248292/chatgpt-web # 总是使用 latest ,更新时重新 pull 该 tag 镜像即可
     ports:
       - 127.0.0.1:3002:3002
     environment:
       # 二选一
-      OPENAI_API_KEY: sk-xxx
+      OPENAI_API_KEY: sk-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
       # 二选一
       OPENAI_ACCESS_TOKEN: xxx
       # API接口地址，可选，设置 OPENAI_API_KEY 时可用
@@ -314,8 +314,8 @@ A: 一种可能原因是经过 Nginx 反向代理，开启了 buffer，则 Nginx
 
 感谢所有做过贡献的人!
 
-<a href="https://github.com/Chanzhaoyu/chatgpt-web/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Chanzhaoyu/chatgpt-web" />
+<a href="https://github.com/luyulong-em/chatgpt-web/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=luyulong-em/chatgpt-web" />
 </a>
 
 ## 赞助
@@ -334,4 +334,4 @@ A: 一种可能原因是经过 Nginx 反向代理，开启了 buffer，则 Nginx
 </div>
 
 ## License
-MIT © [ChenZhaoYu](./license)
+MIT © [luyulong-em](./license)
